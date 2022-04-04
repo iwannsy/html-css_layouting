@@ -136,6 +136,7 @@ section.hero{
         width: auto;
         height: auto;
         background: none;
+        
 
         svg.close{
             display: none;
@@ -205,6 +206,15 @@ section.hero{
         .content {
             text-align: right;
             width: 25em;
+        }
+    }
+
+    .feature.left {
+
+        grid-template-areas: "left right";
+
+        img {
+            grid-area: left;
         }
     }
 }
