@@ -166,7 +166,7 @@ section.hero .down-arrow path {
     right: 0;
     width: 50%;
     height: 42em;
-    border-radius: 35px;
+    border-top-left-radius: 35px;
   }
   .logo {
     color: black;
