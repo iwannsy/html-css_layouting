@@ -164,7 +164,7 @@ section.hero{
         right: 0;
         width: 50%;
         height: 42em;
-
+        border-radius: 35px;
     }
 
     .logo {
@@ -193,14 +193,14 @@ section.hero{
     }
 
     .feature {
-        display: grid;
-        grid-template-columns: repeat(2. auto);
+        display: flex;
+        grid-template-columns: repeat(2.5em auto);
         gap: 3em;
-        margin-bottom: 8em;
+        margin-bottom: 4em;
 
         img {
             width: 25em;
-
+            border-radius: 20px;
         }
 
         .content {
@@ -215,6 +215,7 @@ section.hero{
 
         img {
             grid-area: left;
+            border-radius: 10px;
         }
     }
 }
