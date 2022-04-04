@@ -36,11 +36,33 @@ nav {
     width: 50%;
     z-index: 999;
     text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
 
     ul {
-        
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+
+        a {
+            color: black;
+            padding: .7em 2em;
+            display: block;
+            width: 100%;
+
+            &:hover {
+                background: rgb(219, 219, 219);  
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin: 2em;
+        width: 2.5;
     }
 }
+
 
 header {
     display: flex;
@@ -80,3 +102,109 @@ section.hero{
     }
 }
 
+.more-info {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11em;
+    }
+    .title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    .desc {
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    body {
+        margin: 1.5em 5em;
+        font-family: "Helvetica Neue";
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+
+        svg.close{
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+
+            a {
+                color : white;
+                padding: .5em 1.5em;
+                font-size: .9rem;
+
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .hero-img {
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 42em;
+
+    }
+
+    .logo {
+        color: black;
+
+        span {
+            color: green;
+        }
+    }
+
+    section.hero {
+        color: black;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+
+        svg.down-arrow {
+            stroke: black;
+            position: unset;
+
+
+            path {
+                fill: black;
+            }
+        }
+    }
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2. auto);
+        gap: 3em;
+        margin-bottom: 8em;
+
+        img {
+            width: 25em;
+
+        }
+
+        .content {
+            text-align: right;
+            width: 25em;
+        }
+    }
+}
